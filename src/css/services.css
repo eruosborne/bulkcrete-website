@@ -1,0 +1,76 @@
+/* services.css — supplemental styles for services page */
+
+.page-hero {
+  background: var(--color-surface);
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-hero .hero-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.service-detail-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.service-detail-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.service-detail-item.reverse {
+  direction: rtl;
+}
+.service-detail-item.reverse > * {
+  direction: ltr;
+}
+
+.service-detail-img {
+  aspect-ratio: 4/3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-surface-2);
+}
+
+.service-detail-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-detail-text h2 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 1rem;
+}
+
+.service-detail-text p {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .service-detail-item,
+  .service-detail-item.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+  }
+}
